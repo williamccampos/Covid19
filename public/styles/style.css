@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+
+  background-color: rgba(113, 89, 193, 0.1);
+}
+
+header,
+main,
+footer {
+  text-align: center;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 45px;
+
+  align-items: center;
+  background-color: rgb(113, 89, 193);
+  padding: 16px 64px;
+  border-radius: 6px;
+}
+
+.form h2 {
+  text-align: right;
+  color: #ffffffee;
+  font-size: 18px;
+}
+
+h1,
+h2 {
+  color: #000000cc;
+}
+
+main h2 span {
+  color: #7159c1;
+}
+
+main .infos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.logo {
+  border-radius: 50%;
+  width: 280px;
+  height: 280px;
+  margin: 70px 0;
+}
+
+#img1 {
+  width: 500px;
+  height: 600px;
+}
+
+#img2 {
+  width: 600px;
+  height: 200px;
+}
+header p {
+  font-size: 14px;
+}
+
+header,
+.form,
+main {
+  margin: 0 auto 70px auto;
+  width: 90%;
+  max-width: 600px; /* 500 */
+}
+
+header button {
+  margin-top: 50px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #7159c1;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+form input,
+form button {
+  width: 100%;
+  margin-bottom: 4px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px #ffffff88 solid;
+}
+
+form input {
+  background-color: transparent;
+}
+
+form input::placeholder {
+  color: #ffffffaa;
+}
+
+form button {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+header h1,
+main h2 {
+  margin-bottom: 70px;
+}
+
+.num-casos {
+  color: #7159c1;
+  font-weight: bold;
+  font-size: 19px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+
+  position: relative;
+}
+
+.num-casos::before {
+  content: "";
+  background-color: #7159c155;
+
+  width: 80px;
+  height: 60px;
+
+  position: absolute;
+
+  border-radius: 50% 0;
+  /* border-top-right-radius: 0; */
+  /* transform: rotate(-45deg); */
+}
+
+.info-corona p {
+  margin-top: 24px;
+  margin-bottom: 64px;
+  font-size: 14px;
+}
+
+footer {
+  margin-top: auto;
+  padding-bottom: 16px;
+  padding-top: 20px;
+  border-top: 2px solid #7159c166;
+}
+
+footer span {
+  color: #7159c1;
+}
+
+section.form {
+  transition: all 300ms;
+  margin-top: 20px
+  ;
+}
+
+section.form.hide {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  margin-top: -70px;
+}
+
+@media (max-width: 600px) {
+  img {
+    width: 320px;
+  }
+
+  #img1 {
+    width: 320px;
+    height: 400px;
+  }
+
+  #img2 {
+    width: 320px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 400px) {
+  #img1 {
+    width: 280px;
+    height: 400px;
+  }
+
+  #img2 {
+    width: 280px;
+    height: 100px;
+  }
+}

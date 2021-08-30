@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="./img/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coronavírus (Covid-19)</title>
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="./img/logo-covid.jpg" alt="Covid-19 (Corona Vírus)" />
+    <h2>Coronavírus (Covid-19)</h2>
+    <p>
+      Coronavírus é uma família de vírus que causam infecções respiratórias. O
+      novo agente do coronavírus foi descoberto em 31/12/19 após casos
+      registrados na China. Provoca a doença chamada de coronavírus
+      (COVID-19).
+    </p>
+    <p>Taxa de mortalidade do coronavírus no mundo é de 3,74%</p>
+
+    <button>Pesquisar número de casos</button>
+
+    <section class="form hide">
+      <h2>Quantidade de casos atualizados em tempo real</h2>
+      <form action="/" method="POST">
+        <select name="paises">
+          <option name="pais" value="AF">Afghanistan</option>
+          <option name="pais" value="AL">Albania</option>
+          <option name="pais" value="DZ">Algeria</option>
+          <option name="pais" value="AO">Angola</option>
+          <option name="pais" value="AR">Argentina</option>
+          <option name="pais" value="AU">Australia</option>
+          <option name="pais" value="BE">Belgium</option>
+          <option name="pais" value="BO">Bolivia</option>
+          <option name="pais" value="BR">Brazil</option>
+          <option name="pais" value="CA">Canada</option>
+          <option name="pais" value="CL">Chile</option>
+          <option name="pais" value="CN">China</option>
+          <option name="pais" value="CO">Colombia</option>
+          <option name="pais" value="CU">Cuba</option>
+          <option name="pais" value="EG">Egypt</option>
+          <option name="pais" value="FR">France</option>
+          <option name="pais" value="GE">Georgia</option>
+          <option name="pais" value="DE">Germany</option>
+          <option name="pais" value="HK">Hong Kong</option>
+          <option name="pais" value="IN">India</option>
+          <option name="pais" value="ID">Indonesia</option>
+          <option name="pais" value="IR">Iran</option>
+          <option name="pais" value="IT">Italy</option>
+          <option name="pais" value="JP">Japan</option>
+          <option name="pais" value="MY">Malaysia</option>
+          <option name="pais" value="MX">Mexico</option>
+          <option name="pais" value="KP">North Korea</option>
+          <option name="pais" value="PY">Paraguay</option>
+          <option name="pais" value="PE">Peru</option>
+          <option name="pais" value="PT">Portugal</option>
+          <option name="pais" value="RU">Russia</option>
+          <option name="pais" value="SG">Singapore</option>
+          <option name="pais" value="KR">South Korea</option>
+          <option name="pais" value="US">USA</option>
+          <option name="pais" value="VE">Venezuela</option>
+        </select>
+        <button id="pesquisar">Pesquisar</button>
+      </form>
+    </section>
+    <main>
+      <h2 id="cabecalho">{{ dados.title }} <span>Corona Vírus</span></h2>
+      <section class="infos" id="infos">
+        <div class="info-corona" id="info-corona1">
+          <div class="num-casos">{{ dados.total_cases }}</div>
+          <p>casos totais</p>
+        </div>
+        <div class="info-corona" id="info-corona2">
+          <div class="num-casos">{{ dados.total_recovered }}</div>
+          <p>casos resolvidos</p>
+        </div>
+        <div class="info-corona" id="info-corona3">
+          <div class="num-casos">{{ dados.total_unresolved }}</div>
+          <p>casos não resolvidos</p>
+        </div>
+        <div class="info-corona" id="info-corona4">
+          <div class="num-casos">{{ dados.total_deaths }}</div>
+          <p>total de mortes</p>
+        </div>
+        <div class="info-corona" id="info-corona5">
+          <div class="num-casos">{{ dados.total_new_cases_today }}</div>
+          <p>novos casos hoje</p>
+        </div>
+        <div class="info-corona" id="info-corona6">
+          <div class="num-casos">{{ dados.total_new_deaths_today }}</div>
+          <p>novas mortes hoje</p>
+        </div>
+
+        <div class="info-corona" id="info-corona7">
+          <div class="num-casos">{{ dados.total_active_cases }}</div>
+          <p>casos ativos</p>
+        </div>
+        <div class="info-corona" id="info-corona8">
+          <div class="num-casos">{{ dados.total_serious_cases }}</div>
+          <p>casos sérios</p>
+        </div>
+      </section>
+    </main>
+
+    <h2>Como o vírus Covid-19 se propaga?</h2>
+    <p>
+      O vírus é transmitido pelo contato direto com gotículas respiratórias de
+      uma pessoa infectada (gerada por tosse e espirros) e toque de
+      superfícies contaminadas. O vírus Covid-19 pode sobreviver em
+      superfícies por várias horas, mas desinfetantes simples podem matá-lo.
+    </p>
+
+    <h2>Quais são os sintomas do coronavírus?</h2>
+    <p>
+      <img id="img1" src="/img/sintomas.jpg" alt="" />
+    </p>
+
+    <h2>Como posso evitar o risco de infecção?</h2>
+    <img id="img2" src="/img/GRAFICO-e1583777067982_1.png" alt="" />
+
+    <h2>Devo usar uma máscara cirúrgica?</h2>
+    <p>
+      O uso de máscara cirúrgica é recomendado se você tiver sintomas
+      respiratórios (tosse ou espirro) para proteger os outros. Se você não
+      tiver nenhum sintoma, não há necessidade de usar uma máscara. O uso de
+      máscara cirúrgica apenas não é suficiente para interromper as infecções
+      e deve ser combinado com a lavagem frequente das mãos, cobrindo a boca e
+      o nariz quando espirrar e tossir, e evitando o contato próximo com
+      qualquer pessoa com sintomas de gripe ou resfriado (tosse, espirro,
+      febre).
+    </p>
+
+    <h2 id="feed">O que devo fazer se um membro da família apresentar sintomas?</h2>
+    <p>
+      Fique atento quanto as orientações da secretaria de saúde da sua cidade.
+      O Departamento de Saúde de Pato Branco, pede a todos que anotem o número de telefone 3213-1740, e se por ventura
+      você/conhecido tiver algum sintoma da doença NÃO É PRA IR ao UPA ou hospital.
+      Estão solicitando que ligue para este número, que o Departamento de Saude irá até a sua casa e fará o teu
+      acompanhamento lá.
+      Obs.: Um infectado em um ambiente com outras pessoas doentes, com imunidade baixa, irá alastrar a doença. Portanto
+      anotem este número em sua agenda de celular e se precisar é só ligar.
+    </p>
+    </p>
+
+  </header>
+
+
+
+  <footer id="ass"><span></span> William Campos</footer>
+  <script src="/js/scripts.js"></script>
+</body>
+
+</html>
